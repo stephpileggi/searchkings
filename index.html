@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SearchKings Web Developer Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
 <!-- Allows users the ability to get to the main content for your site -->
@@ -16,25 +17,35 @@
 <!-- header start  -->
   <header>
     <div class="wrapper">
-      <div>
-          <img src="images/logo.svg" alt="HVAC logo">
-          <a href="#">Maury County,</a>
-          <a href="#">555-555-5555</a>
-          <a href="#">24/7 Emergency service available</a>
+      <div class="header-content">
+        <div class="row no-gutters align-items-center justify-content-between">
+          <div class="col-6">
+              <img src="images/logo.svg" class="logo" alt="HVAC logo">
+          </div>
+          <div class="col-6 header-buttons">
+              <a href="#" class="address-button"><span>?</span>Maury County,</a>
+              <a href="#" class="phone-button"><span>?</span>555-555-5555</a>
+              <a href="#" class="emergency-button">24/7 Emergency service available</a>
+          </div>
+        </div>     
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Sales</a></li>
-          <li><a href="#">Repairs</a></li>
-          <li><a href="#">Promotions</a></li>
-          <li><a href="#">Financing</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Google</a></li>
-        </ul>
-      </nav>
     </div>
+    <nav>
+      <div class="wrapper">
+        <div class="">
+            <ul class="nav justify-content-between">
+                <li class="nav-item"><a href="#">Reviews</a></li>
+                <li class="nav-item"><a href="#">Sales</a></li>
+                <li class="nav-item"><a href="#">Repairs</a></li>
+                <li class="nav-item"><a href="#">Promotions</a></li>
+                <li class="nav-item"><a href="#">Financing</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+                <span><li class="nav-item"><a href="#"><img src="./images/google-badge.png" alt="Google badge">Google</a></li></span>
+            </ul>
+        </div>
+      </div>  
+    </nav>
   </header>
 <!-- header end -->
 
@@ -43,21 +54,23 @@
   <main id ="maincontent">
     <section class="banner">
       <div class="wrapper">
-        <div class="banner__container">
-          <div class="banner__container__title">
-            <h1>Your cooling & heating specialists in maury county</h1>
+        <div class="banner__title text-center">
+          <h1>Your cooling & heating specialists in maury county</h1>
+        </div>
+        <div class="banner__info row no-gutters justify-content-around">
+          <div>
+              <h2 class="col"><span>?</span>24/7 emergency services</h2>
+              <h2 class="col"><span>?</span>Evening, weekend & same-day service</h2>
+              <h2 class="col"><span>?</span>available</h2>
           </div>
-          <div class="banner__container__info">
-            <h2>24/7 emergency services</h2>
-            <h2>Evening, weekend & same-day service</h2>
-            <h2>available</h2>
-            <h2>Licensed, bonded & insured technicians</h2>
-            <h2>Locally owned and operated</h2>
-            <h2>Customer satisfaction guaranteed</h2>
+          <div>
+              <h2 class="col"><span>?</span>Licensed, bonded & insured technicians</h2>
+              <h2 class="col"><span>?</span>Locally owned and operated</h2>
+              <h2 class="col"><span>?</span>Customer satisfaction guaranteed</h2>
           </div>
-          <div class="banner__container__button">
-            <a href="#">Get a quote now</a>
-          </div>
+        </div>
+        <div class="row no-gutters banner__button ">
+          <a href="#" class="col">Get a quote now <span>?</span></a>
         </div>
       </div>
     </section>
@@ -65,13 +78,20 @@
 <!-- promo start -->
     <section class="promo">
       <div class="wrapper">
-        <div class="promo__container__info">
-          <p>Take Advantage of Our New Installation Offer</p>
-          <p>10-year parts and labor warranty + $99 yearly maintenance package</p>
-        </div>
-        <div class="promo__container__buttons">
-          <a href="#">Get a new air conditioner</a>
-          <a href="#">Get a new furnace</a>
+        <div class="row no-gutters justify-content-between">
+            <div class="promo__info">
+                <div class="question">
+                  <p>?</p>
+                </div>
+                <div class="promo__info--text">
+                    <p><span>Take Advantage of Our New Installation Offer</span></p>
+                    <p>10-year parts and labor warranty + $99 yearly maintenance package</p>
+                </div> 
+            </div>
+            <div class="promo__buttons">
+              <a href="#">Get a new air conditioner<span class="promo-purple"><p>?</p></span></a>
+              <a href="#">Get a new furnace<span class="promo-red"><p>?</p></span></a>
+            </div>
         </div>
       </div>
     </section>
@@ -79,35 +99,53 @@
 <!-- services start -->
     <section class="services">
       <div class="wrapper">
-        <div class="services__container__info">
-          <p>badge placeholder</p>
+        <div class="text-center services__container__info">
+          <img src="./images/repair-man-icon.png" alt="Repair man icon">
           <h2>Hvac repair, installation & maintenance</h2>
           <p>We make it easy to complete your your heating and cooling projects.</p>
         </div>
-        <div class="services__container__services">
-          <div>
-            <img src="" alt="Cooling systems badge">
+        <div class="row justify-content-around services__container__services">
+          <div class="col services-box">
+            <div class="services-box__img">
+              <img src="./images/snowflake.svg" alt="Cooling systems badge">
+            </div>
             <h3>Cooling systems</h3>
+            <p>?</p>
           </div>
-          <div>
-            <img src="" alt="Heating systems badge">
-            <h3>Cooling systems</h3>
+          <div class="col services-box">
+            <div class="services-box__img">
+              <img src="./images/fire.svg" alt="Heating systems badge">
+            </div>
+            <h3>Heating systems</h3>
+            <p>?</p>
           </div>
-          <div>
-            <img src="" alt="Ductless systems badge">
-            <h3>Cooling systems</h3>
+          <div class="col services-box">
+            <div class="services-box__img">
+              <img src="./images/air.svg" alt="Ductless systems badge">
+            </div>  
+            <h3>Ductless systems</h3>
+            <p>?</p>
           </div>
-          <div>
-            <img src="" alt="Air handlers">
-            <h3>Cooling systems</h3>
+          <div class="col services-box">
+            <div class="services-box__img">
+              <img src="./images/air-handler.png" alt="Air handlers badge">
+            </div>  
+            <h3>Air handlers</h3>
+            <p>?</p>
           </div>
-          <div>
-            <img src="" alt="Indoor air quality">
-            <h3>Cooling systems</h3>
+          <div class="col services-box">
+            <div class="services-box__img">
+              <img src="./images/home.svg" alt="Indoor air quality badge">
+            </div>  
+            <h3>Indoor air quality</h3>
+            <p>?</p>
           </div>
-          <div>
-            <img src="" alt="Maintenance Sservice badge">
-            <h3>Cooling systems</h3>
+          <div class="col services-box">
+            <div class="services-box__img">
+              <img src="./images/clipboard.svg" alt="Maintenance service badge">
+            </div>  
+            <h3>Maintenance service</h3>
+            <p>?</p>
           </div>
         </div>
       </div>
@@ -116,25 +154,30 @@
 <!-- article start -->
     <section class="article">
       <div class="article__container__image">
-        <img src="" alt="Worker fixing hvac wiring">
+        <img src="./images/worker.jpg" alt="Worker fixing hvac wiring">
       </div>
       <div class="article__container__info">
-        <h2>Why people choose us</h2>
-        <p>Our company is a family-owned business in its second generation, we’re on a mission to clear 
-          the air of any doubts you might have about HVAC companies. We’re constantly looking for ways to make Better, 
-          cleaner, faster philosophy with HVAC company.</p>
+        <div class="article__container__info--wrapper">
+          <div class="article__container__info--padding">
+              <h2>Why people choose us</h2>
+              <p>Our company is a family-owned business in its second generation, we’re on a mission to clear 
+                the air of any doubts you might have about HVAC companies. We’re constantly looking for ways to make Better, 
+                cleaner, faster philosophy with HVAC company.
+              </p>
+              <a href="#"><span>?</span>Learn more about us</a>
+          </div> 
+        </div>
       </div>
     </section>
 <!-- article end -->
 <!-- qualifications start -->
     <section class="qualifications">
       <div class="wrapper">
-        <div class="qualifications__container">
-          <img src="" alt="Accredited business badge">
-          <img src="" alt="A+ rating badge">
-          <img src="" alt="Trane badge">
-          <img src="" alt="Facebook reviews badge">
-          <img src="" alt="Google reviews badge">
+        <div class="row justify-content-around qualifications__container">
+          <img src="./images/bbb-badge.png" class="col" alt="Accredited business badge">
+          <img src="./images/trane-badge.png" class="col" alt="Trane badge">
+          <img src="./images/fb-badge.png" class="col" alt="Facebook reviews badge">
+          <img src="./images/google-reviews-badge.png" class="col" alt="Google reviews badge">
         </div>
       </div>
     </section>
@@ -142,13 +185,15 @@
 <!-- testimonials start -->
     <section class="testimonials">
       <div class="wrapper">
-        <p>? placeholder</p>
-        <p>Love this company! Scheduling is always easy, the reps keep you informed. Very handy to receive a text letting 
-          you know the tech is on his way. Also like the explanation of services with photos of each step. Highly recommend 
-          Clear the Air to anyone looking for a new unit, or a service company.
-        </p>
-        <p>- Shannon S.</p>
-        <a href="#">Read more</a>
+        <div class="testimonials__container text-center">
+          <h3>?</h3>
+          <p>Love this company! Scheduling is always easy, the reps keep you informed. Very handy to receive a text letting 
+            you know the tech is on his way. Also like the explanation of services with photos of each step. Highly recommend 
+            Clear the Air to anyone looking for a new unit, or a service company.
+          </p>
+          <p>- Shannon S.</p>
+          <a href="#">Read more<span>?</span></a>
+        </div> 
       </div>
     </section>
 <!-- testimonials end -->
@@ -160,7 +205,7 @@
 <!-- main footer start -->
     <section class="main-footer">
       <div>
-        <img src="images/logo.svg" alt="HVAC logo">
+        <img src="./images/logo-white.png" alt="HVAC logo">
         <a href="#">Maury County,</a>
         <a href="#">555-555-5555</a>
         <a href="#">24/7 Emergency service available</a>

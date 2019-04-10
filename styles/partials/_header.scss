@@ -1,0 +1,113 @@
+// HEADER STYLES
+
+header {
+    background: $whiteColor;
+    border-top: 7px solid $primaryColor;
+}
+
+.header-content {
+    padding: 2% 0;
+}
+
+.logo {
+    width: 50%;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    
+    span{
+        @include primaryFont(1rem, 0, $whiteColor, 400);
+        border: 1px solid $whiteColor;
+        border-radius: 2px;
+        padding: 1px 4px;
+        margin-right: 5px;
+    }
+}
+
+.address-button, 
+.phone-button,
+.emergency-button {
+    @include primaryFont(1.4rem, 1, $whiteColor, 400);
+    color: $whiteColor;
+    display: block;
+    &:hover {
+        text-decoration: none;
+        color: $primaryColor;
+    }
+}
+
+.address-button, 
+.phone-button {
+    background: $blackColor;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.address-button {
+    border-radius: 50px 0 0 50px;
+}
+
+.emergency-button {
+    background: $accentColor;
+    border-radius: 0 50px 50px 0;
+    text-transform: uppercase;
+    padding: 13px 15px;
+    width: 190px;
+}
+
+nav {
+    background: $primaryColor;
+    padding: 15px 0 5px 0;
+    position: relative;
+
+    span {
+        a {
+            background: #259D51;
+            padding: 10px 20px;
+            border-radius: 0 0 15px 15px;
+            position: relative; 
+            top: -15px;
+            right: -15px;
+        }
+
+        a::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 5px 5px;
+            border-color: transparent transparent #00722a transparent;
+            position: absolute;
+            top: -.1px;
+            left: -5px;
+        }
+
+        a::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 0 5px;
+            border-color: transparent transparent transparent #00722a;
+            position: absolute;
+            top: -.1px;
+            right: -5px;
+        }
+
+        img {
+            width: 20%;
+        }
+    }
+
+    a {
+        @include primaryFont(1.8rem, 1, $whiteColor, 400);
+        text-transform: uppercase;
+
+        &:hover {
+            color: $accentColor;
+            text-decoration: none;
+        }
+    }
+}
