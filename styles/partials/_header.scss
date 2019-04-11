@@ -6,11 +6,11 @@ header {
 }
 
 .header-content {
-    padding: 2% 0;
+    padding: 20px 0;
 }
 
 .logo {
-    width: 50%;
+    max-width: 50%;
 }
 
 .header-buttons {
@@ -63,6 +63,14 @@ nav {
     position: relative;
 
     span {
+        @include primaryFont(1rem, 0, $whiteColor, 400);
+        border: 1px solid $whiteColor;
+        border-radius: 2px;
+        padding: 1px 4px;
+        margin: 0px 0 5px 5px; 
+    }
+
+    .g-badge {
         a {
             background: #259D51;
             padding: 10px 20px;
@@ -109,5 +117,74 @@ nav {
             color: $accentColor;
             text-decoration: none;
         }
+    }
+}
+
+//hamburger menu
+    .hamburger {
+        display: none;
+    }
+
+    // .togMenu {
+    //     margin-top: 0px;
+    // }
+
+    .show.nav__links {
+        display: block;
+    }
+
+@media(max-width: 992px) {
+    nav {
+        padding: 7px 0 0 0;
+    }
+
+    .address-button, 
+    .phone-button {
+        display: none;
+    }
+
+    .emergency-button {
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    .hamburger {
+        display: block;
+        color: $primaryColor;
+        font-size: 2.5rem;
+    }
+    
+    .show.nav__links {
+        height: 380px;
+        z-index: 100;
+    }
+    
+    .nav__links {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        background: $primaryColor;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav__links li {
+        display: block; 
+        padding: 8px 0; 
+        border: .5px solid $whiteColor;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .logo {
+        min-width: 150px;
+    }
+    .emergency-button {
+        display: none;
     }
 }
